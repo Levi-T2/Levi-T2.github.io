@@ -33,8 +33,9 @@
         <section class="row">
           <div class="col-12 col-md-6">
             <div class="d-flex flex-column align-items-center text-center p-1">
-              <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
-                alt="Capstone Image" class="project-img">
+              <a href="https://capstone.levityler.com">
+                <img src="../assets/img/Capstone.png" alt="Capstone Image" class="project-img">
+              </a>
               <h4 class="mt-3 mb-0">Auto-Tunes</h4>
               <p class="p-2">
                 As a team of four developers we were given two weeks to construct a UML, Figma Mock, and pitch for our
