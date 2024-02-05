@@ -12,16 +12,16 @@ const routes = [
     component: loadPage('HomePage')
   },
   {
-    path: '/about',
-    name: 'About',
-    component: loadPage('AboutPage')
+    path: '/projects',
+    name: 'Projects',
+    component: loadPage('ProjectsPage')
   },
   {
-    path: '/account',
-    name: 'Account',
-    component: loadPage('AccountPage'),
-    beforeEnter: authGuard
-  }
+    path: '/contact',
+    name: 'Contact',
+    component: loadPage('ContactPage')
+  },
+
 ]
 
 export const router = createRouter({
