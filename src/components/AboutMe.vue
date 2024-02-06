@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 col-md-7 mobile order-2 order-md-1">
+    <div class="col-12 col-md-8 mobile order-2 order-md-1">
         <div class="px-5">
             <h2 class="mobile-txt">About Me</h2>
             <p class="mb-0 mobile-txt">
@@ -9,7 +9,7 @@
             </p>
         </div>
     </div>
-    <div class="col-12 col-md-5 d-flex justify-content-center mobile order-1 order-md-2">
+    <div class="col-12 col-md-3 contact-bg mobile order-1 order-md-2">
         <div class="contact-wrapper">
             <a title="LinkedIn" href="www.linkedin.com/in/levi-tyler" class="button">
                 <i class="mdi mdi-linkedin"></i>
@@ -17,6 +17,12 @@
             <a title="Github" href="https://github.com/Levi-T2" class="button">
                 <i class="mdi mdi-github"></i>
             </a>
+        </div>
+        <div class="pt-3">
+            <button class="contact-btn">
+                Contact Info
+                <i class="mdi mdi-phone-log"></i>
+            </button>
         </div>
     </div>
 </template>
@@ -32,13 +38,18 @@ export default {
 
 
 <style lang="scss" scoped>
+.contact-bg {
+    padding-top: 1rem;
+    padding-bottom: 1.25rem;
+    background-color: var(--dark-green);
+    border-radius: 3.5px;
+    text-align: center;
+}
+
 .contact-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--dark-green);
-    border-radius: 3.5px;
-    width: 20rem;
 
     .button {
         color: var(--lightest-teal);
@@ -55,6 +66,19 @@ export default {
     }
 }
 
+.contact-btn {
+    background-color: var(--lightest-teal);
+    color: var(--darkest-green);
+    padding: 0.45rem 0.75rem;
+    border-radius: 3.5px;
+    transition: 0.2s ease-in-out;
+    font-size: 1.1em;
+
+    &:hover {
+        transform: scale(1.075);
+    }
+}
+
 @media (max-width: 768px) {
     .mobile {
         margin-bottom: 1.75rem;
@@ -64,8 +88,8 @@ export default {
         text-align: center;
     }
 
-    .contact-wrapper {
-        height: 5rem;
+    .contact-bg {
+        border-radius: 0;
     }
 }
 </style>

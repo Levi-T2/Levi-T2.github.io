@@ -6,7 +6,7 @@
     <section class="row mt-4">
       <AboutMe />
     </section>
-    <section class="row mt-4">
+    <section class="project-slanted row mt-4">
       <ProjectsPreview />
     </section>
     <!-- <div class="col-12 margin-custom">
@@ -104,31 +104,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-// .header-slanted {
-//   padding-bottom: 2.25rem;
-//   background-color: rgb(51, 51, 51);
-//   color: white;
-//   clip-path: polygon(0% 0%,
-//       100% 0%,
-//       100% calc(100% - 2rem),
-//       0% 100%);
-// }
+.project-slanted {
+  padding-top: 2.25rem;
+  background-color: var(--dark-green);
+  color: var(--main-bg);
+}
 
-// .project-slanted {
-//   padding-top: 3rem;
-//   background-color: rgb(51, 51, 51);
-//   color: white;
-//   clip-path: polygon(0% 0%,
-//       100% 14.5%,
-//       100% 100%,
-//       0% 100%);
-// }
-
-// .img-position {
-//   display: flex;
-//   justify-content: end;
-//   position: absolute;
-//   padding-right: 10.5rem;
-//   padding-top: 2.5rem;
-// }
+@media (max-width: 768px) {
+  .project-slanted {
+    padding-top: 1.55rem;
+  }
+}
 </style>

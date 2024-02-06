@@ -35,8 +35,8 @@ export default {
         width: 19.5rem;
         object-fit: cover;
         object-position: 0% 15%;
-        border-radius: 3.5px;
-        box-shadow: 0px 0px 0px 6.5px var(--dark-green);
+        border-radius: 3px;
+        box-shadow: 0px 0px 0px 7px var(--dark-green);
     }
 }
 
