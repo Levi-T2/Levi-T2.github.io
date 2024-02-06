@@ -1,7 +1,13 @@
 <template>
   <div class="container-fluid">
-    <section class="row align-items-center mt-3">
+    <section class="row align-items-center mt-4">
       <HeroTop />
+    </section>
+    <section class="row mt-4">
+      <AboutMe />
+    </section>
+    <section class="row mt-4">
+      <ProjectsPreview />
     </section>
     <!-- <div class="col-12 margin-custom">
       <div class="col-12 col-md-6 px-3 d-flex justify-content-start flex-column ">
@@ -41,10 +47,12 @@
               <img src="../assets/img/Keepr.png" alt="Keepr Image" class="project-img">
             </a>
             <h4 class="mt-3 mb-0">Keepr</h4>
-            <p class="p-2">Keepr was our final project given to our cohort and it required us to utilize a Vue3
+            <p class="p-2">
+              Keepr was our final project given to our cohort and it required us to utilize a Vue3
               front-end with a C#
               back-end for the project.
-              It required us to put 'Keeps' into 'Vaults' using a 'VaultKeep'; similar to Pinterest.</p>
+              It required us to put 'Keeps' into 'Vaults' using a 'VaultKeep'; similar to Pinterest.
+            </p>
           </div>
         </div>
       </section>
@@ -84,13 +92,14 @@
 </template>
 
 <script>
+import AboutMe from '../components/AboutMe.vue';
 import HeroTop from '../components/HeroTop.vue';
-
+import ProjectsPreview from '../components/ProjectsPreview.vue';
 export default {
   setup() {
     return {};
   },
-  components: { HeroTop }
+  components: { HeroTop, AboutMe, ProjectsPreview }
 }
 </script>
 
@@ -115,21 +124,6 @@ export default {
 //       0% 100%);
 // }
 
-.project-img {
-  height: 14rem;
-  width: 24rem;
-  border-radius: 3.5px;
-  box-shadow: 8px 6.5px 0px 3px rgb(145, 115, 160);
-  transition: ease-in-out 0.275s;
-}
-
-.project-img:hover {
-  transform: translateX(-10px);
-  box-shadow: 18px 6.5px 0px 3px rgb(145, 115, 160);
-}
-
-
-
 // .img-position {
 //   display: flex;
 //   justify-content: end;
@@ -137,73 +131,4 @@ export default {
 //   padding-right: 10.5rem;
 //   padding-top: 2.5rem;
 // }
-
-.txt-gray {
-  color: rgb(130, 130, 130);
-}
-
-.txt-dark-gray {
-  color: rgb(75, 75, 75);
-}
-
-.icon-size {
-  font-size: 4em;
-}
-
-.social-size {
-  font-size: 3em;
-  padding-left: 0.9rem;
-  padding-right: 0.9rem;
-  color: rgb(145, 115, 160);
-  transition: ease-in-out 0.21s;
-}
-
-.social-size:hover {
-  transform: translateY(-0.3rem);
-}
-
-.margin-custom {
-  margin-top: 2.25rem;
-}
-
-@media screen and (max-width: 768px) {
-  .project-slanted {
-    padding-top: 3rem;
-    background-color: rgb(51, 51, 51);
-    color: white;
-    clip-path: polygon(0% 0%,
-        100% 3.5%,
-        100% 100%,
-        0% 100%);
-  }
-
-  .project-img {
-    height: 11rem;
-    width: 20rem;
-    border-radius: 3.5px;
-    box-shadow: 8px 6.5px 0px 3px rgb(145, 115, 160);
-    transition: ease-in-out 0.275s;
-  }
-
-  .img-position {
-    display: flex;
-    justify-content: end;
-    position: absolute;
-    padding-right: 7.25rem;
-    padding-top: 8.75rem;
-  }
-
-  .img-size {
-    height: 16rem;
-    width: 14rem;
-    object-fit: cover;
-    object-position: 0% 15%;
-    border-radius: 3.5px;
-    box-shadow: 0px 0px 0px 6.5px rgb(145, 115, 160);
-  }
-
-  .margin-custom {
-    margin-top: 13rem;
-  }
-}
 </style>

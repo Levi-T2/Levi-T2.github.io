@@ -1,6 +1,6 @@
 <template>
   <main class="app">
-    <sidebar />
+    <sidebar id="desktop" />
     <router-view />
   </main>
 </template>
@@ -44,11 +44,19 @@ export default {
     padding: 2rem;
     background-color: var(--main-bg);
 
-    @media (max-width: 768px) {
-      padding-left: 6rem;
-    }
+    // @media (max-width: 768px) {
+    //   padding-left: 6rem;
+    // }
   }
 }
+
+@media (max-width: 768px) {
+  #desktop {
+    display: none;
+  }
+}
+
+
 
 button {
   cursor: pointer;
