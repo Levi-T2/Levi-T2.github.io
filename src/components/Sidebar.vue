@@ -1,8 +1,6 @@
 <template>
     <aside :class="`${isExpanded && 'isExpanded'}`">
         <div class="logo">
-            <img src="https://image.similarpng.com/very-thumbnail/2021/05/Modern-logo-design-template-on-transparent-PNG.png"
-                alt="Logo">
         </div>
         <div class="menu-toggle-wrap">
             <button class="btn-arrow menu-toggle" @click="toggleMenu">
@@ -13,19 +11,19 @@
         </div>
         <h3>Menu</h3>
         <div class="menu">
-            <RouterLink :to="{ name: 'Home' }" class="button">
+            <RouterLink title="Home" :to="{ name: 'Home' }" class="button">
                 <span class="md-icons">
                     <i class="mdi mdi-home"></i>
                 </span>
                 <span class="text">Home</span>
             </RouterLink>
-            <RouterLink :to="{ name: 'Projects' }" class="button">
+            <RouterLink title="Projects" :to="{ name: 'Projects' }" class="button">
                 <span class="md-icons">
                     <i class="mdi mdi-file-cabinet"></i>
                 </span>
                 <span class="text">Projects</span>
             </RouterLink>
-            <RouterLink :to="{ name: 'Contact' }" class="button">
+            <RouterLink title="Contact" :to="{ name: 'Contact' }" class="button">
                 <span class="md-icons">
                     <i class="mdi mdi-information-box"></i>
                 </span>
@@ -62,7 +60,7 @@ aside {
     transition: 0.2s ease-out;
 
     .logo {
-        margin-bottom: 1rem;
+        margin-bottom: 1.75rem;
         z-index: 2;
         max-width: 5rem;
 

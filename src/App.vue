@@ -3,12 +3,15 @@
     <sidebar id="desktop" />
     <router-view />
   </main>
+
+  <project-modal />
 </template>
 
 <script>
 import { computed } from 'vue'
 import { AppState } from './AppState'
 import Sidebar from './components/Sidebar.vue'
+import ProjectModal from './components/ProjectModal.vue'
 
 export default {
   setup() {
@@ -16,7 +19,7 @@ export default {
       appState: computed(() => AppState)
     }
   },
-  components: { Sidebar }
+  components: { Sidebar, ProjectModal }
 }
 </script>
 <style lang="scss">

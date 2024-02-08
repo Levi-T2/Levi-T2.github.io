@@ -50,6 +50,11 @@ class ProjectService {
         AppState.projects = this.projects.map((projects) => new Project(projects));
         console.log(AppState.projects);
     }
+    getProjectDetails(projectTitle) {
+        const foundProject = this.projects.find(project => project.title == projectTitle);
+        AppState.activeProject = new Project(foundProject);
+        console.log(AppState.activeProject);
+    }
 }
 
 export const projectService = new ProjectService()

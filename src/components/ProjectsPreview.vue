@@ -2,7 +2,8 @@
     <div class="col-12 mb-1">
         <h2 class="text-center fw-bold">Projects</h2>
     </div>
-    <div class="col-12 col-md-6 d-flex justify-content-center mt-2">
+    <div data-bs-toggle="modal" data-bs-target="#projectModal" @click="getProjectDetails(`Keepr`)"
+        class="col-12 col-md-6 d-flex justify-content-center mt-2">
         <div class="image-container">
             <p class="title-txt">Keeper</p>
             <img title="See More Details" src="../assets/img/Keepr.png" class="img-size" alt="Project Image">
@@ -13,8 +14,8 @@
             </p>
         </div>
     </div>
-    <!-- TODO Need to add data-bs to the projects above for modal support -->
-    <div class="col-12 col-md-6 d-flex justify-content-center mt-2">
+    <div data-bs-toggle="modal" data-bs-target="#projectModal" @click="getProjectDetails(`BCW Capstone`)"
+        class="col-12 col-md-6 d-flex justify-content-center mt-2">
         <div class="image-container">
             <p class="title-txt">BCW Capstone</p>
             <img title="See More Details" src="../assets/img/Capstone.png" class="img-size" alt="Project Image">
@@ -37,9 +38,21 @@
 
 
 <script>
+import { AppState } from '../AppState';
+import { projectService } from '../services/ProjectService';
+
 export default {
     setup() {
-        return {}
+        return {
+            getProjectDetails(projectName) {
+                try {
+                    AppState.activeProject = null;
+                    projectService.getProjectDetails(projectName);
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+        }
     }
 };
 </script>
