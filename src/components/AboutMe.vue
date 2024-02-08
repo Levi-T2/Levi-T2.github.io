@@ -11,7 +11,7 @@
     </div>
     <div class="col-12 col-md-3 contact-bg mobile order-1 order-md-2">
         <div class="contact-wrapper">
-            <a title="LinkedIn" href="www.linkedin.com/in/levi-tyler" class="button">
+            <a title="LinkedIn" href="https://linkedin.com/in/levi-tyler" class="button">
                 <i class="mdi mdi-linkedin"></i>
             </a>
             <a title="Github" href="https://github.com/Levi-T2" class="button">
@@ -19,10 +19,12 @@
             </a>
         </div>
         <div class="pt-3">
-            <button class="contact-btn">
-                Contact Info
-                <i class="mdi mdi-phone-log"></i>
-            </button>
+            <RouterLink :to="{ name: 'Contact' }">
+                <button class="contact-btn">
+                    Contact Info
+                    <i class="mdi mdi-phone-log"></i>
+                </button>
+            </RouterLink>
         </div>
     </div>
 </template>

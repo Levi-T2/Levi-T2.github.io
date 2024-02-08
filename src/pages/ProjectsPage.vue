@@ -53,16 +53,6 @@ import { AppState } from '../AppState';
 
 export default {
     setup() {
-        // onMounted(() => {
-        //     getProjects();
-        // });
-        // function getProjects() {
-        //     try {
-        //         projectService.getProjects()
-        //     } catch (error) {
-        //         console.log(error);
-        //     }
-        // }
         return {
             getProjectDetails(projectName) {
                 try {
@@ -89,7 +79,7 @@ export default {
     transition: 0.2s ease-in-out;
 
     &:hover {
-        background-color: var(--lightest-teal);
+        background-color: var(--seafoam);
         color: var(--darkest-green);
     }
 }
