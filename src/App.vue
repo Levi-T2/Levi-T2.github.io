@@ -3,6 +3,9 @@
     <sidebar id="desktop" />
     <router-view />
   </main>
+  <footer id="mobile" class="sticky-bottom">
+    <mobile-tabs />
+  </footer>
 
   <project-modal />
 </template>
@@ -12,6 +15,7 @@ import { computed } from 'vue'
 import { AppState } from './AppState'
 import Sidebar from './components/Sidebar.vue'
 import ProjectModal from './components/ProjectModal.vue'
+import MobileTabs from './components/MobileTabs.vue'
 
 export default {
   setup() {
@@ -19,7 +23,7 @@ export default {
       appState: computed(() => AppState)
     }
   },
-  components: { Sidebar, ProjectModal }
+  components: { Sidebar, ProjectModal, MobileTabs }
 }
 </script>
 <style lang="scss">
@@ -53,9 +57,17 @@ export default {
   }
 }
 
+#mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   #desktop {
     display: none;
+  }
+
+  #mobile {
+    display: block;
   }
 }
 
