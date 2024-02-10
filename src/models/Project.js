@@ -4,5 +4,6 @@ export class Project {
         this.info = projects.info
         this.githubUrl = projects.githubUrl
         this.liveDemo = projects.liveDemo
+        this.demoUrl = projects.demoUrl
     }
 }

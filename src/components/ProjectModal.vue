@@ -12,6 +12,16 @@
                             {{ info }}</li>
                     </ul>
                 </div>
+                <div class="modal-footer align-items-center justify-content-between">
+
+                    <div v-if="project.liveDemo == true">
+                        <a :href="project.demoUrl" class="demo-btn">Live Demo</a>
+                    </div>
+                    <div v-if="project.githubUrl">
+                        <a :href="project.githubUrl" class="git-btn">See on Github</a>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -33,4 +43,32 @@ export default {
 </script>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.demo-btn {
+    background-color: var(--darkest-green);
+    color: var(--seafoam);
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1em;
+    transition: 0.2s ease-in-out;
+    border-radius: 1.25rem;
+
+    &:hover {
+        color: var(--darkest-green);
+        background-color: var(--seafoam);
+    }
+}
+
+.git-btn {
+    background-color: var(--dark-green);
+    color: var(--lightest-teal);
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1em;
+    transition: 0.2s ease-in-out;
+    border-radius: 1.25rem;
+
+    &:hover {
+        color: var(--dark-green);
+        background-color: var(--lightest-teal);
+    }
+}
+</style>

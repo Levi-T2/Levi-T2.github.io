@@ -11,7 +11,8 @@ class ProjectService {
                 iThree: "During this project, I learned how to make complex object relations withing mySQL, and how to manage those relations with a C# based back-end."
             },
             githubUrl: "https://github.com/Levi-T2/Keepr/tree/main",
-            liveDemo: true
+            liveDemo: true,
+            demoUrl: "https://levityler.com/#/"
         },
         {
             title: "BCW Capstone", info: {
@@ -22,7 +23,8 @@ class ProjectService {
                 iFive: "I worked mostly on the back-end, which utilized Express.js with Mongoose to make calls to our MongoDB database."
             },
             githubUrl: "https://github.com/Levi-T2/Capstone",
-            liveDemo: true
+            liveDemo: true,
+            demoUrl: "https://capstone.levityler.com/#/"
         },
         {
             title: "Ionic Dex", info: {
